@@ -1,2 +1,8 @@
 body {
+  background: rgb(210, 224, 238);
+}
+
+h1 {
+  color: rgb(74, 78, 92);
+  font-style: italic;
 }
