@@ -1,3 +1,5 @@
+// this string added
+
 fetch('https://mesto.nomoreparties.co/v1/cohort-51/cards', {
     headers: {
         authorization: '428b584a-5472-4fac-aca2-5c3d80bec64e'
