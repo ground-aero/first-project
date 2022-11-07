@@ -1,16 +1,40 @@
+const employee1 = {
+    name: "Mary",
+    position: "Web-designer",
+    salary: 900,
+}
+
+const employee2 = {
+    name: "Eugene",
+    position: "Web-developer",
+    salary: 900,
+}
+
+function promote(newPosition, salaryAdd) {
+    this.position = newPosition
+    this.salary += salaryAdd
+
+    return this.name+" is "+this.position+" and earns S"+this.salary
+}
+
+const MaryAdd = promote.bind(employee1)
+ console.log(MaryAdd("Head", 500))
+
+const EugenAdd = promote.bind(employee2)
+console.log(EugenAdd("Owner", 1000))
+
 // this string added
+// fetch('https://mesto.nomoreparties.co/v1/cohort-51/cards', {
+//     headers: {
+//         authorization: '428b584a-5472-4fac-aca2-5c3d80bec64e'
+//     }
+// })
+//     .then(res => res.json())
+//     .then((result) => {
+//         console.log(result);
+//     });
 
-fetch('https://mesto.nomoreparties.co/v1/cohort-51/cards', {
-    headers: {
-        authorization: '428b584a-5472-4fac-aca2-5c3d80bec64e'
-    }
-})
-    .then(res => res.json())
-    .then((result) => {
-        console.log(result);
-    });
-
-
+//---------------------------------------
 
 // console.log(Square.calculateArea())
 
