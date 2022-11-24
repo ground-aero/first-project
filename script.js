@@ -19,6 +19,7 @@ task()
 
 console.log('after')
 
+// Here some change for git 
 
 // for (i in author.rights) {
 //     x = author.rights[i]
