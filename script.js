@@ -1,27 +1,79 @@
-const employee1 = {
-    name: "Mary",
-    position: "Web-designer",
-    salary: 900,
+
+function task(){
+    return new Promise((resolve, reject) => {
+        console.log('1')
+        setTimeout(() => {
+            resolve('Ok')
+        }, 2000)
+    })
 }
 
-const employee2 = {
-    name: "Eugene",
-    position: "Web-developer",
-    salary: 900,
-}
+console.log('before')
+task()
+    .then((data) => {
+        console.log('RESOLVED PROMISE', data)
+    })
+    .catch((err) => {
+        console.log('rejectedd', err)
+    })
 
-function promote(newPosition, salaryAdd) {
-    this.position = newPosition
-    this.salary += salaryAdd
+console.log('after')
 
-    return this.name+" is "+this.position+" and earns S"+this.salary
-}
 
-const MaryAdd = promote.bind(employee1)
- console.log(MaryAdd("Head", 500))
+// for (i in author.rights) {
+//     x = author.rights[i]
+//     console.log(x)
+// }
 
-const EugenAdd = promote.bind(employee2)
-console.log(EugenAdd("Owner", 1000))
+
+// function Person(firstName, lastName, born) {
+//     //this = {}
+//     this.firstName = firstName
+//     this.lastName = lastName
+//     this.born = born
+//
+//     //return this
+// }
+
+// Person.prototype.age = function() {
+//     let now = new Date();
+//
+//     return now.getFullYear() - this.born;
+// }
+
+// let person = new Person('Eugen', 'Avdeev', 1980)
+//
+// console.log(person)//Person{firstName:..., lastName:..., born: 1980}
+// console.log(person.age())//42
+
+
+// bind --------------------------------------------------------
+
+// const employee1 = {
+//     name: "Mary",
+//     position: "Web-designer",
+//     salary: 900,
+// }
+//
+// const employee2 = {
+//     name: "Eugene",
+//     position: "Web-developer",
+//     salary: 900,
+// }
+//
+// function promote(newPosition, salaryAdd) {
+//     this.position = newPosition
+//     this.salary += salaryAdd
+//
+//     return this.name+" is "+this.position+" and earns S"+this.salary
+// }
+//
+// const MaryAdd = promote.bind(employee1)
+//  console.log(MaryAdd("Head", 500))
+//
+// const EugenAdd = promote.bind(employee2)
+// console.log(EugenAdd("Owner", 1000))
+// ------------------------------------------------------------------
 
 // this string added
 // fetch('https://mesto.nomoreparties.co/v1/cohort-51/cards', {
