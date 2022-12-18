@@ -1,3 +1,4 @@
+@import './index.css'
 //1.1st commit
 //1st commit
 //2nd commit.
