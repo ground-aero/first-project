@@ -1,29 +1,68 @@
-
 //1.1st commit
 //1st commit
 //2nd commit.
 //3rd commit
 //4th commit.
 
-function task(){
-    return new Promise((resolve, reject) => {
-        console.log('1')
-        setTimeout(() => {
-            resolve('Ok')
-        }, 2000)
-    })
-}
 
-console.log('before')
-task()
-    .then((data) => {
-        console.log('RESOLVED PROMISE', data)
-    })
-    .catch((err) => {
-        console.log('rejectedd', err)
-    })
 
-console.log('after')
+function math() {
+ let c = 15;
+ let d = 2;
+ 
+ let result = c + d
+
+return result 
+ }
+
+console.log(math());
+
+
+//-------------------------------------------
+
+// fullName = {
+//   name: 'Eugene',
+//   lastName: 'Avdeev',
+//   profession: 'Web Developer', 
+//   link: 'http://....',
+// }
+
+// const fullObj = function (formValue) {
+//     const objInFn = {
+//       name: formValue.name,
+//       link: formValue.link,
+//     };
+//       console.log(objInFn);
+//   }
+
+// const newPerson = new fullObj(fullName);
+
+// console.log(newPerson)
+
+// const formV = 
+
+//----------------------------------------------
+// function task(){
+//     return new Promise((resolve, reject) => {
+//         console.log('1')
+//         setTimeout(() => {
+//             resolve('Ok')
+//         }, 2000)
+//     })
+// }
+
+// console.log('before')
+// task()
+//     .then((data) => {
+//         console.log('RESOLVED PROMISE', data)
+//     })
+//     .catch((err) => {
+//         console.log('rejectedd', err)
+//     })
+
+// console.log('after')
+
+//------------------------------------
 
 // Here some change for git
 
@@ -31,7 +70,6 @@ console.log('after')
 //     x = author.rights[i]
 //     console.log(x)
 // }
-
 
 // function Person(firstName, lastName, born) {
 //     //this = {}
@@ -52,7 +90,6 @@ console.log('after')
 //
 // console.log(person)//Person{firstName:..., lastName:..., born: 1980}
 // console.log(person.age())//42
-
 
 // bind --------------------------------------------------------
 
@@ -124,7 +161,6 @@ console.log('after')
 // console.log(zhenya)
 // console.log(zhenya.name)
 
-
 // const buttonsDiv = document.querySelector('.buttons-div')
 // // const button = document.querySelector('.btn')
 
@@ -145,8 +181,6 @@ console.log('after')
 //     handleBtns()
 //   }
 // })
-
-
 
 // for (const key in userInfo) {
 //     console.log(key)
