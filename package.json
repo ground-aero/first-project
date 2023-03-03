@@ -1,0 +1,23 @@
+{
+  "name": "training",
+  "version": "0.0.3",
+  "description": "training npm webpack",
+  "main": "./src/pages/index.js",
+  "scripts": {
+    "test": "testt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ground-aero/training.git"
+  },
+  "author": "Eugene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ground-aero/training/issues"
+  },
+  "homepage": "https://github.com/ground-aero/training#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
