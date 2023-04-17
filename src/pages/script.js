@@ -27,6 +27,29 @@
 // tRex.say(); // T-rex says ЯAWR
 //==========================================
 
+// === БЛОК-СХЕМА. "Computer Science". Hаибольшее число из трех =================================================
+
+// function maxNum(a, b, c) {
+//   if (a > b) {
+//     if (a > c) {
+//       console.log(a);
+//     } else {
+//       console.log(c);
+//     }
+//   } else {
+//     if (b > c) {
+//       console.log(b)
+//     } else {
+//       console.log(c);
+//     }
+//   }
+//
+// }
+//
+// maxNum(1600, 2400, 1300)
+
+// ====================================================
+
 // function capitalize(str) {
 //   //возвращать новую строку
 //   let newStr = str.split(' ')
@@ -46,7 +69,7 @@
 
 //=======================================================
 /** Посчитать гласные из заданного массива */
-// const vowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е']; 
+// const vowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
 
 // function findVowels(str) {
 //      // let a = str.split('').contains(vowels)
@@ -93,13 +116,123 @@
 //
 // fnWithCallBack(initialFn)
 
-// ==========================================
-console.log(JSON.stringify([1, 2, 3]))
+// ====== JSON stringify =====================
+// console.log(JSON.stringify([1, 2, 3]))
+//
+// console.log(JSON.parse(JSON.stringify([1, 2, 3])))
 
-console.log(JSON.parse(JSON.stringify([1, 2, 3])))
+// === Destructuring ========================================
 
-// ===========================================
+// const process = {
+//   GET: 100,
+//     PORT: 3000,
+// }
+//
+// let {PORT} = process;
+//
+// console.log(PORT)
 
+// === Leetcode ========================================
+
+// let addToArray = function(num, k) {
+//   // let sum = Number(num.join('')) + key
+//   // return String(sum).split('').map((s) => {
+//   //   return Number(s)
+//   // })
+//   let sum = (BigInt(num.join('')) + BigInt(k))
+//   return String(sum).split('')
+//   // return String(sum).split('').map((s) => Number(s))
+// }
+//
+// console.log(addToArray([1,2,6,3,0,7,1,7,1,9,7,5,6,6,4,4,0,0,6,3], 516))
+
+// ==== ======================================================
+//     function addToArr(n,m,o) {
+//       let str1 = n.toString()
+//   let str2 = m.toString()
+//   let str3 = o.toString()
+//   return str1.concat(str2).concat(str3).split('').map(s=>Number(s))
+// }
+//
+// console.log(addToArr(123456, 77777,999))
+
+// ==== Evens Only - filter() ===============================
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const evenOnly = nums.filter(function(n) {
+  const remainder = n % 3;
+  return remainder === 0
+})
+
+console.log(evenOnly)
+
+// ===================================================
+// const data = {
+//   ducks: [
+//     {
+//       id: 0,
+//       name: "Уткопёс",
+//       description:
+//           "Эта редкая утка несколько раз была замечена в Центральной Европе. Достоверные источники сообщают, что однажды уткопёс был замечен около озера в парке, где он играл со старыми носками. Несколько лет назад редактору National Cryptoducks посчастливилось встретить эту утку. «Она была такая милая и дружелюбная! И совсем не страшная. Мне удалось понаблюдать за ней минут 15 или 20, а потом раз! И уткопёс как комета пересёк озеро и исчез во тьме.",
+//       img: "/duck-images/dog-duck.png",
+//     },
+//     {
+//       id: 1,
+//       name: "Жикря-краф",
+//       description:
+//           "Самая высокая криптоутка в истории. В тайных архивах обнаружены обрывистые воспоминания путешественники Василия Жилина об ужасающей встрече с представителем этого вида: «Это было летом 1962 г. Мы разбили лагерь, все уже легли спать, когда из кустов раздалось странное шуршание. Включив фонарик, я увидел... Эта длинная шея... метр, не иначе! Я до сих пор помню это кряканье. Ужасное, ужасное кряканье.",
+//       img: "/duck-images/giraffe-duck.png",
+//     },
+//     {
+//       id: 2,
+//       name: "Зебрутка",
+//       description:
+//           "Эта пугливая красавица была замечена в Центральной Африке. Криптоуктологи установили, что этих величественных зеброуток можно встретить только в безветренную ночь на горе под полной луной в зените.",
+//       img: "/duck-images/zebra-duck.png",
+//     },
+//     {
+//       id: 3,
+//       name: "Неопознанная летающая утка",
+//       description:
+//           "Многие встречали этих уток. Учёные до сих пор не знают, зачем они продолжают посещать нашу планету. Каковы их намерения? Они мирные наблюдатели или злодеи? Возможно, мы никогда не узнаем правды.",
+//       img: "/duck-images/ufo-duck.png",
+//     },
+//   ],
+// };
+//
+// console.log(data)
+
+// ===== Область видимости ф-ций =============================================
+function callMe() {
+  const internet = 'Internet';
+
+  function callMeToo() {
+    console.log(internet);
+  }
+
+  return callMeToo;
+}
+
+const newCallMeToo = callMe();
+  console.log(newCallMeToo()); // "Internet"
+
+//=================================================
+// function makeConsoleMessage(text) {
+//   function consoleMessage(text2) { // добавьте функции параметр
+//     console.log(text + text2); // и используйте его в вызове console.log
+//   }
+//
+//   return consoleMessage;
+// }
+//
+// const consoleHello = makeConsoleMessage('Привет, ');
+// const consoleGoodBye = makeConsoleMessage('Пока, ');
+// const consoleHemingway = makeConsoleMessage('Прощай, ');
+//
+// consoleHello('Андрей'); // "Привет, Андрей"
+// consoleGoodBye('Ирина'); // "Пока, Ирина"
+// consoleHemingway('оружие!'); // "Прощай, оружие!"
+//================================================
 // const obj = {
 //     obj1: {
 //         id: 12345,
@@ -261,7 +394,7 @@ console.log(JSON.parse(JSON.stringify([1, 2, 3])))
 // fullName = {
 //   name: 'Eugene',
 //   lastName: 'Avdeev',
-//   profession: 'Web Developer', 
+//   profession: 'Web Developer',
 //   link: 'http://....',
 // }
 
@@ -277,7 +410,7 @@ console.log(JSON.parse(JSON.stringify([1, 2, 3])))
 
 // console.log(newPerson)
 
-// const formV = 
+// const formV =
 
 //----------------------------------------------
 // function task(){
