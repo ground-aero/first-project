@@ -1,3 +1,24 @@
+// console.log(String(777))
+
+// ====== Local Storage ======================
+// const object = {
+//     name: "Maxim",
+//     age: 42,
+// }
+//
+// localStorage.setItem('obj1', JSON.stringify(object))
+//
+// const raw = localStorage.getItem('obj1')
+// const person = JSON.parse(raw)
+// person.name = 'Evgenn'
+//
+// console.log(person)
+
+// localStorage.setItem('person2', JSON.stringify(person))
+// const raw2 = localStorage.getItem('person2')
+// const person2 = JSON.parse(raw2)
+
+//=====================================
 // let arrObjects = [
 //     {
 //         id: 1,
@@ -49,14 +70,3 @@
 
 // console.log(browserType.length);
 
-// function sortMyString(S) { -----------------------------------------------------
-//     // console.log(S.split('').join(''));//arr
-//
-//
-//     let evens = S.split('').filter((el, ind) => ind % 2 === 0).join('')
-//     let odds = S.split('').filter((el, ind) => ind % 2 !== 0).join('')
-//
-//     return evens + ' ' + odds
-// }
-
-// console.log(sortMyString('CodeWars'));
