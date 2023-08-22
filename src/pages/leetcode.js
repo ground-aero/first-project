@@ -9,9 +9,40 @@
 //6th commit.
 //7th commit.
 
-
 // ==== Leetcode ===========================================================================================================
 
+// = Given two arrays of strings list1 and list2,
+// Return all the common strings with the least index sum. Return the answer in any order.
+// /**
+//  * @param {string[]} list1
+//  * @param {string[]} list2
+//  * @return {string[]}
+//  */
+// let list1 = ['Shogun', 'Tapioca Express', 'Burger King', 'KFC'];
+// let list2 = [
+//   'Piatti',
+//   'The Grill at Torrey Pines',
+//   'Hungry Hunter Steakhouse',
+//   'Shogun',
+// ];
+
+// let findRestaurant = function (list1, list2) {
+//   // ToDo: 1.find only common string(s)
+//   // 1.1. отфильтровать дублируемые айтемы
+//   let duplicatedItems = [...new Set(list1)].filter((item) =>
+//     list2.includes(item)
+//   );
+
+//   return duplicatedItems;
+// };
+
+// console.log(findRestaurant(list1, list2));
+
+// //
+// let c = 5;
+// console.log(Math.pow(c, 3));
+
+// =============================================================
 // let addToArray = function(num, k) {
 //   // let sum = Number(num.join('')) + key
 //   // return String(sum).split('').map((s) => {
@@ -24,14 +55,137 @@
 //
 // console.log(addToArray([1,2,6,3,0,7,1,7,1,9,7,5,6,6,4,4,0,0,6,3], 516))
 
-
-
-
-
-
-
 // ======== CODEWARS ==============================================================================================
 
+// -----------------------------
+// Your job is to write a function, which takes three integers a, b, and c as arguments,
+// and returns True if exactly two of of the three integers are positive numbers (greater than zero),
+// and False - otherwise.
+//
+// function twoArePositive(a, b, c) {
+//   if ((a>0 && b>0) || (b>0 && c>0) || (a>0 && c>0)) {
+//
+//     if (a<=0 || b<=0 || c <=0) {
+//       console.log('true //if-2')
+//       return true
+//     }
+//     console.log('false-1 //if-1')
+//     return false
+//   } else {
+//     console.log('false-2 //else')
+//     return false
+//   }
+// }
+//
+// console.log(twoArePositive(4, 6, -10));
+
+// -----------------------------
+// Help Suzuki rake his garden!
+// Suzuki having a keen eye is always on the lookout for anything creeping into the garden
+// that must be removed during the daily raking such as insects or moss.
+// Task: Rake out any items that are not a rock or gravel and replace them with gravel such that:
+// garden = 'slug spider rock gravel gravel gravel gravel gravel gravel gravel'
+// let garden =
+//   'gravel gravel rock slug ant slug gravel snail rock gravel slug gravel ant';
+// // // Rake out any items that are not a rock or gravel and replace them with gravel such that:
+// // // Returns a string with all items except a rock or gravel replaced with gravel:
+// function rakeGarden(garden) {
+//   // 1. TODO: Заменить в строке все слова (кроме "gravel" и "rock") на: "gravel"
+//   // let b = garden.replaceAll(/slug/g, 'gravel');
+//   return garden.split(' ')
+//   .map(i => i === 'rock' ? 'rock' : 'gravel')
+//   .join(' ')
+// }
+
+// console.log(rakeGarden(garden));
+
+// -----------------------------
+// Some really funny web dev gave you a sequence of numbers from his API response as an sequence of strings!
+// You need to cast the whole array to the correct type.
+// Create the function that takes as a parameter a sequence of numbers
+// represented as strings and outputs a sequence of numbers.
+//
+// function toNumberArray(stringarray) {
+//   // 1. каждый элемент массива (строки) преобразовать в цифры в массиве
+//   return stringarray.map(Number);
+// }
+// console.log(toNumberArray(['1.6', '2', '3', '', '-1']));
+
+// ---------------------
+// Complete the method that takes a boolean value and return a "Yes" string for true,
+// or a "No" string for false.
+// p.s: Если вызвать двойное отрицание, можно быстро привести любое выражение к логическому типу.
+// function boolToWord(bool) {
+//   // if bool === true => 'Yes'
+//   // else => 'No'
+
+//   if (!!bool === true) {
+//     return 'Yes'
+//   } else {
+//     return 'No'
+//   }
+// }
+
+// console.log(boolToWord(''))
+// console.log(!!2);
+
+// function switchItUp(number){ ---------------------------
+// //Write your own Code!
+//   switch (number) {
+//     case 1:
+//       return 'One';
+//       break;
+//     case 2:
+//       return 'Two';
+//       break;
+//     case 3:
+//       return 'Three';
+//       break;
+//     case 4:
+//       return 'Four';
+//       break;
+//     case 5:
+//       return 'Five';
+//       break;
+//     case 6:
+//       return 'Six';
+//       break;
+//     case 7:
+//       return 'Seven';
+//       break;
+//     case 8:
+//       return 'Eight';
+//       break;
+//     case 9:
+//       return 'Nine';
+//       break;
+//     default:
+//       return 'Zero';
+//   }
+// }
+//
+// console.log(switchItUp(1))
+// ------------------------------------------------
+
+// =======- Write a function which calculates the average of the numbers in a given list.
+// function findAverage(array) {
+//   // count sum of all numbers
+//   // devide the sum to number of indexes
+//   // if array is empty => 0
+//   let sum = 0
+//   array.forEach(num => sum += num)
+//
+//   let average = sum / array.length;
+//
+//   return average || 0;
+// }
+//
+// const list = [200,100,200,100]
+//
+// console.log(findAverage(list))
+// console.log(list.length)
+
+// ============================
 // function mango(quantity, price){
 //     let q = quantity
 //     let p = price
@@ -91,20 +245,25 @@
 //
 // console.log(sortMyString('CodeWars'));
 
-
 // --sperm chromosome
-
+/* The male gametes or sperm cells in humans and other mammals are heterogametic and
+*  contain one of two types of sex chromosomes.
+* They are either X or Y. The female gametes or eggs however, contain only the X sex chromosome and are homogametic.
+* The sperm cell determines the sex of an individual in this case. If a sperm cell containing an X chromosome
+* fertilizes an egg, the resulting zygote will be XX or female.
+* If the sperm cell contains a Y chromosome, then the resulting zygote will be XY or male.
+* TASK: Determine if the sex of the offspring will be male or female based on the X or Y chromosome present in the male's sperm.**/
+//
+// const a = 'X' + 'X'
+//
 // function chromosomeCheck(sperm) {
 //     return sperm.includes('Y') ?
 //         "Congratulations! You're going to have a son." :
 //         "Congratulations! You're going to have a daughter."
 // }
 //
-// console.log(chromosomeCheck('XY'));
-//
-// const a = 'X' + 'Y'
+// console.log(chromosomeCheck(a));
 // console.log(a)
-
 
 // ------------------------------------------------
 //Write a function that finds the sum of all its arguments.
@@ -125,7 +284,6 @@
 // console.log(sum(1, 2, 3, 4, 5))
 // => 15
 
-
 // function sortMyString(S) { -----------------------------------
 //     // console.log(S.split('').join(''));//arr
 //
@@ -138,22 +296,18 @@
 
 // console.log(sortMyString('CodeWars'));
 
-
-
-
 // ===============================================================================================================
 // ===============================================================================================================
 
-let user1 = {
-  user: 'Eugen',
-  age: 42
-}
-
-const {user: userName} = user1
-  console.log(userName)
+// let user1 = {
+//   user: 'Eugen',
+//   age: 42
+// }
+//
+// const {user: userName} = user1
+//   console.log(userName)
 // =====
 // console.log('LOFTBLOG'.slice(4))
-
 
 // ===============================
 // function Animal(type, phrase) {
@@ -172,7 +326,6 @@ const {user: userName} = user1
 //
 // fox.say(); // fox says woopwoopwoop
 // tRex.say(); // T-rex says ЯAWR
-
 
 // ====================================================
 
@@ -228,7 +381,6 @@ const {user: userName} = user1
 // reverseWords('всегда много путей достичь цель есть'); // "есть цель достичь путей много всегда"
 // reverseWords('испробовать их все должны вы'); // "вы должны все их испробовать"
 
-
 // ====== JSON stringify ===================================
 // console.log(JSON.stringify([1, 2, 3]))
 //
@@ -256,17 +408,16 @@ const {user: userName} = user1
 // console.log(addToArr(123456, 77777,999))
 
 // ==== Evens Only - filter() ===============================
-const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//
+// const evenOnly = nums.filter(function(n) {
+//   const remainder = n % 3;
+//   return remainder === 0
+// })
+//
+// console.log(evenOnly)
 
-const evenOnly = nums.filter(function(n) {
-  const remainder = n % 3;
-  return remainder === 0
-})
-
-console.log(evenOnly)
-
-
-
+// -----------------------------------------------
 // const data = {
 //   ducks: [
 //     {
@@ -368,8 +519,6 @@ console.log(evenOnly)
 
 // console.log(doubled);
 
-
-
 //-----------------------------------------------------------------------
 
 //DOM
@@ -381,7 +530,6 @@ console.log(evenOnly)
 // document.body.append(div)
 
 //-----------------------------------------------------------------------
-
 
 // fullName = {
 //   name: 'Eugene',
