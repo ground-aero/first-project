@@ -1,63 +1,5 @@
 // PLAYGROUND:
 
-// let str1 = 'А роза упала на лапу Азора'
-
-let space = ' '
-
-console.log(space.toLowerCase() !== space.toUpperCase())
-
-
-let str = 'Казак азак'
-// let str1 = 'Madam Adam'
-console.log(str.split(' ').join('').toLowerCase(), str.length)
-
-function isEquals(str1, str2) {
-  return str1.toLowerCase() === str2.toLowerCase()
-}
-
-function isLetter(char) {
-  return char.toLowerCase() !== char.toUpperCase()
-}
-
-function isPalindrome(str) {
-
-  let start = 0
-  let end = str.length - 1
-
-  // str1.split('')
-  // str1.split(' ').join('')
-
-  while(start < end) {
-
-    let firstChar = str[start]
-    let lastChar = str[end]
-
-    // if (!isLetter(firstChar)) { // если не буква (а символ)
-    //   start += 1
-    //   continue
-    // }
-
-    // if (!isLetter(lastChar)) {
-    //   end -= 1
-    //   continue
-    // }
-
-    if (!isEquals(firstChar, lastChar)) {
-      return false
-    }
-
-    start += 1
-    end -= 1
-  }
-
-  return true
-}
-
-console.log(isPalindrome(str))
-
-// _------------------------------------------------------
-
-
 // _------------------------------------------------------
 // let items = []
 
@@ -108,10 +50,10 @@ console.log(isPalindrome(str))
 //   console.log(`${element} `); // сразу возвращает значения:: Mom nsbp Dad nsbp Bro
 // }
 
-const word = 'hello'
-for (let char of word) {
-  console.log(char);
-}
+// const word = 'hello'
+// for (let char of word) {
+//   console.log(char);
+// }
 
 
 //-------- Запись “typeof class {}” равна чему? --------------------------------------------------------
