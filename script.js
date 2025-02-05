@@ -6,26 +6,28 @@
 //4th commit
 
 //5th commit
+// 5+6th commit 22aug,2023
+// ----------------------------------
+// function task(){
+//     return new Promise((resolve, reject) => {
+//         console.log('1')
+//         setTimeout(() => {
+//             resolve('Ok')
+//         }, 2000)
+//     })
+// }
 
-function task(){
-    return new Promise((resolve, reject) => {
-        console.log('1')
-        setTimeout(() => {
-            resolve('Ok')
-        }, 2000)
-    })
-}
+// console.log('before')
+// task()
+//     .then((data) => {
+//         console.log('RESOLVED PROMISE', data)
+//     })
+//     .catch((err) => {
+//         console.log('rejectedd', err)
+//     })
 
-console.log('before')
-task()
-    .then((data) => {
-        console.log('RESOLVED PROMISE', data)
-    })
-    .catch((err) => {
-        console.log('rejectedd', err)
-    })
-
-console.log('after')
+// console.log('after')
+// -------------------------------
 
 // Here some change for git
 

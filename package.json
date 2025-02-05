@@ -4,7 +4,10 @@
   "description": "training npm webpack",
   "main": "./src/pages/index.js",
   "scripts": {
-    "test": "jest"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
