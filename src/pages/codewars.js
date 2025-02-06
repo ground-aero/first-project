@@ -103,17 +103,17 @@
 // For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
 // Note: for this kata y isn't considered a vowel.
 
-const str9 = "This website is for losers LOL!"
+// const str9 = "This website is for losers LOL!"
 
-function disemvowel(str9) {
+// function disemvowel(str9) {
   
-    let vowels = ['a','e', 'i', 'o', 'u']
-    // str.includes(vowels)
+//     let vowels = ['a','e', 'i', 'o', 'u']
+//     // str.includes(vowels)
     
-    return str9.split('').map(i => i.replace(/[aeiou]/gi, '')).join('');
-  }
+//     return str9.split('').map(i => i.replace(/[aeiou]/gi, '')).join('');
+//   }
 
-console.log(disemvowel(str9));
+// console.log(disemvowel(str9));
 
 
 // --------------------------------------------------------------
